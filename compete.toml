@@ -32,7 +32,6 @@ fn main() {
     }
     println!("{} {:?}", n, a);
 }
-
 '''
 
 [template.new]

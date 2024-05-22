@@ -1,7 +1,6 @@
-use proconio::fastout;
-use proconio::input;
-use proconio::marker::Chars;
+use proconio::{fastout, input, marker::Chars};
 
+#[fastout]
 fn main() {
     input! {
         n: usize,
