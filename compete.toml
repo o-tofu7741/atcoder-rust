@@ -22,10 +22,9 @@ test-suite = "{{ manifest_dir }}/testcases/{{ bin_alias }}.yml"
 
 [template]
 src = '''
-use proconio::fastout;
-use proconio::input;
-use proconio::marker::Chars;
+use proconio::{fastout, input, marker::Chars};
 
+#[fastout]
 fn main() {
     input! {
         n: usize,
@@ -33,6 +32,7 @@ fn main() {
     }
     println!("{} {:?}", n, a);
 }
+
 '''
 
 [template.new]
