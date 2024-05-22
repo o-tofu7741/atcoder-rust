@@ -5,7 +5,6 @@ use proconio::{fastout, input, marker::Chars};
 fn main() {
     input! {
         n: usize,
-        a: Chars,
     }
-    println!("{} {:?}", n, a);
+    println!("{}", n * n);
 }
