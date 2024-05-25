@@ -4,8 +4,8 @@ use proconio::{fastout, input, marker::Chars};
 #[fastout]
 fn main() {
     input! {
-        n: usize,
-        a: Chars,
+        a:usize,
+        b:usize,
     }
-    println!("{} {:?}", n, a);
+    println!("{}", a + b);
 }

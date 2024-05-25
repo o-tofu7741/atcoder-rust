@@ -5,7 +5,6 @@ use proconio::{fastout, input, marker::Chars};
 fn main() {
     input! {
         n: usize,
-        a: Chars,
     }
-    println!("{} {:?}", n, a);
+    println!("{}", (usize::from_str_radix(&(n.to_string()), 2).unwrap()))
 }

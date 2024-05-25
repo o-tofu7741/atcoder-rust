@@ -5,7 +5,14 @@ use proconio::{fastout, input, marker::Chars};
 fn main() {
     input! {
         n: usize,
-        a: Chars,
+        x: usize,
+        a: [usize;n]
     }
-    println!("{} {:?}", n, a);
+    let mut ans = "No";
+    for i in &a {
+        if i == &x {
+            ans = "Yes";
+        }
+    }
+    println!("{}", ans)
 }

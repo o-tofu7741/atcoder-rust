@@ -5,7 +5,16 @@ use proconio::{fastout, input, marker::Chars};
 fn main() {
     input! {
         n: usize,
-        a: Chars,
+        q: usize,
+        a:[usize;n],
+        lr:[(usize,usize);q],
     }
-    println!("{} {:?}", n, a);
+    let mut s: Vec<usize> = vec![0];
+    for i in &a {
+        s.push(s.last().unwrap() + i);
+    }
+    // println!("{:?}", &s);
+    for (l, r) in lr {
+        println!("{}", s[r] - s[l-1])
+    }
 }
