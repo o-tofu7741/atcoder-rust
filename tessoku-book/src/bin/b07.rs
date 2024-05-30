@@ -4,8 +4,23 @@ use proconio::{fastout, input, marker::Chars};
 #[fastout]
 fn main() {
     input! {
+        t: usize,
         n: usize,
-        a: Chars,
+        lr: [(usize,usize); n]
     }
-    println!("{} {:?}", n, a);
+    let mut times = vec![0; t + 1];
+    for (l, r) in lr {
+        times[l] += 1;
+        times[r] -= 1;
+    }
+    let s: Vec<isize> = times
+        .iter()
+        .scan(0, |sum, x| {
+            *sum += x;
+            Some(*sum)
+        })
+        .collect();
+    for i in 0..t {
+        println!("{}", s[i])
+    }
 }
