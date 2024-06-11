@@ -5,7 +5,8 @@ use proconio::{fastout, input, marker::Chars};
 fn main() {
     input! {
         n: usize,
-        a: Chars,
+        x: usize,
+        a: [usize;n]
     }
-    println!("{} {:?}", n, a);
+    println!("{}", a.binary_search(&x).unwrap() + 1);
 }

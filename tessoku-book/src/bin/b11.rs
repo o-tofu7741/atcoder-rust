@@ -5,7 +5,19 @@ use proconio::{fastout, input, marker::Chars};
 fn main() {
     input! {
         n: usize,
-        a: Chars,
+        mut a: [usize;n],
+        q: usize,
+        x: [usize;q]
     }
-    println!("{} {:?}", n, a);
+    a.sort();
+    for i in &x {
+        let r = a.binary_search(i);
+        let mut ans = 0;
+        if r.is_ok() {
+            ans = r.unwrap();
+        } else {
+            ans = r.unwrap_err();
+        }
+        println!("{}", ans);
+    }
 }
